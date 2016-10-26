@@ -1,28 +1,28 @@
- The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels.
+ 1. The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels.
 Example Input: 3
 Example Output: 3
 
-The program handles letters in Uppercase and Lowercase.
+2. The program handles letters in Uppercase and Lowercase.
 Example Input: Each
 Example Output: Each
 
-The program adds a "-" to the end of a word before doing any conversions to the word.
+3. The program adds a "-" to the end of a word before doing any conversions to the word.
 Example Input: add
 Example Output: add-
 
 
-The program moves all of the first consecutive consonants of words beginning with consonants to the end, and add "ay".
-Example Input: strength
-Example Output: ength-stray
+4. The program moves all of the first consecutive consonants of words beginning with consonants to the end, and add "ay".
+  Example Input: strength
+  Example Output: ength-stray
 
-The program moves "q" along with the "u" when they are part of the first consonants.
-Example Input: squeal
-Example Output: eal-squay
+5. The program moves "q" along with the "u" when they are part of the first consonants.
+  Example Input: squeal
+  Example Output: eal-squay
 
-The program adds "ay" to single-letter words beginning with a vowel.
-Example Input: i
-Example Output: i-ay
+6. The program adds "ay" to single-letter words beginning with a vowel.
+  Example Input: i
+  Example Output: i-ay
 
-The program adds "way" to the end if the first letter of the word is a vowel and the word contains more than one letter.
-Example Input: each
-Example Output: each-way
+7. The program adds "way" to the end if the first letter of the word is a vowel and the word contains more than one letter.
+  Example Input: each
+  Example Output: each-way

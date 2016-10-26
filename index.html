@@ -10,12 +10,18 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Pig Latin Translator</h1>
-        </div>
-      <h2>Enter your word</h2>
-      <label for=""></label>
-      <input type="text" name="name" value="">
-      <button type="button" name="submit">Enter</button>
+        <form id="sentence">
+          <div class="form-group">
+            <h1>Pig Latin Translator</h1>
+            <h2>Enter your word</h2>
+            <label for="input">Enter your sentence</label>
+            <input type="text" id="textbox">
+            <button type="button" name="submit">Enter</button>
+          </div>
+        </form>
+        <div>
+          <p><span class="output"></span></p>
+      </div>
     </div>
   </body>
 </html>
