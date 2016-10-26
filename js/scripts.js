@@ -44,9 +44,9 @@ var pigLatin = function(userInput){
         wordArr.push("ay");
       }
     });
-    if (punctBegin === true)  {
-      wordArr.push(punctuation);
-    }
+    // if (punctBegin === true)  {
+    //   wordArr.push(punctuation);
+    // }
     return wordArr.join("");
   };
 
