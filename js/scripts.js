@@ -1,12 +1,21 @@
 var pigLatin = function(userInput){
+  debugger;
   var words = userInput.split(" ");
   var wordArr = [];
   var outputArr = [];
   var vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U", "y", "Y"];
   var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n","p", "q", "r", "s", "t", "v", "w", "x", "z"];
 
-  var changeWord = function(word)  {
+  var changeWord = function(word){
+    console.log(word);
     wordArr = word.slice();
+    var punctBegin = false;
+    var checkAlpha = /^[a-zA-Z]/;
+    // if (wordArr[(wordArr.length)-1].match(/[^a-zA-Z]/))  {
+    //   var punctuation = wordArr.splice(wordArr.length-1, 1);
+    //   console.log(punctuation);
+    //   punctBegin = true;
+    // }
     wordArr.push("-");
     if(wordArr.length > 2){
       vowels.forEach(function(vowel)  {
@@ -35,6 +44,9 @@ var pigLatin = function(userInput){
         wordArr.push("ay");
       }
     });
+    if (punctBegin === true)  {
+      wordArr.push(punctuation);
+    }
     return wordArr.join("");
   };
 
@@ -42,7 +54,6 @@ var pigLatin = function(userInput){
     var letters = word.split("");
     var pigLatinWord = changeWord(letters);
     outputArr.push(pigLatinWord);
-    //set checkword equal to var that can be pushed into output string
   });
   var output = outputArr.join(" ");
   return output;
@@ -51,6 +62,7 @@ var pigLatin = function(userInput){
 $(document).ready(function()  {
   $("form#sentence").submit(function(event){
     var sentenceInput = $("input#textbox").val();
+    debugger;
     $(".output").text(pigLatin(sentenceInput));
     event.preventDefault();
   });
